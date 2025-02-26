@@ -17,7 +17,7 @@ def main():
     else :
         print("Operator ungueltig")
 
-
+if __name__ == "__main__":
 main()
 
 
