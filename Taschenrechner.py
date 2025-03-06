@@ -1,8 +1,7 @@
 import tkinter as tk
 from ctypes import c_char
-from tkinter import messagebox  #jo für die messagbox
+from tkinter import messagebox
 Eingabe_liste = []
-count = 0
 def eins_sagen():
     Eingabe_liste.append(1)
 def zwei_sagen():
@@ -35,8 +34,12 @@ def minus():
 def quadrat():
     Eingabe_liste.append("**")
 
+### Die Idee ist das die Liste alle Elemente in ein print Befehl überführen für die ausgabe
+### Die Herausforderung besteht unter ander m da rin das der pop befehl null immer überschriben wird.
+
+
 def ist_gleich():
-    print(Eingabe_liste)  # Platzhalter
+    label.config(text="Du wirs hier eiens Tages dein Ergebniss sehen!")
 
 if __name__ == "__main__":
     root = tk.Tk()
@@ -190,6 +193,15 @@ if __name__ == "__main__":
     button16.pack()
     button16.place(x=100,y=500)
     root.mainloop()
+
+    label = tk.Label(root, text="", font=("Arial", 14))         #Leeres Label
+    label.pack(pady=20)
+
+
+
+
+
+
 
 
 
