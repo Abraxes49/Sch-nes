@@ -37,9 +37,12 @@ def quadrat():
 ### Die Idee ist das die Liste alle Elemente in ein print Befehl überführen für die ausgabe
 ### Die Herausforderung besteht unter ander m da rin das der pop befehl null immer überschriben wird.
 
+rechnung = 0
 
 def ist_gleich():
-    label.config(text="Du wirs hier eiens Tages dein Ergebniss sehen!")
+    "".join(map(str, Eingabe_liste))
+    ergebnis = eval(rechnung)
+    messagebox.showinfo("hier ist dein ergebnis",f"{rechnung}")
 
 if __name__ == "__main__":
     root = tk.Tk()
@@ -192,12 +195,12 @@ if __name__ == "__main__":
     button15.place(x=300,y=400)
     button16.pack()
     button16.place(x=100,y=500)
-    root.mainloop()
+
 
     label = tk.Label(root, text="", font=("Arial", 14))         #Leeres Label
     label.pack(pady=20)
 
-
+root.mainloop()
 
 
 
