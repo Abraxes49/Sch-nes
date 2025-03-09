@@ -37,12 +37,12 @@ def quadrat():
 ### Die Idee ist das die Liste alle Elemente in ein print Befehl überführen für die ausgabe
 ### Die Herausforderung besteht unter ander m da rin das der pop befehl null immer überschriben wird.
 
-rechnung = 0
+
 
 def ist_gleich():
-    "".join(map(str, Eingabe_liste))
+    rechnung= " ".join(map(str, Eingabe_liste))
     ergebnis = eval(rechnung)
-    messagebox.showinfo("hier ist dein ergebnis",f"{rechnung}")
+    messagebox.showinfo("Dein Ergebnis ist",f"{ergebnis}")
 
 if __name__ == "__main__":
     root = tk.Tk()
@@ -54,113 +54,113 @@ if __name__ == "__main__":
     root,
     text="1",
     command=eins_sagen,
-    width=5,
-    height=2,
+    width=10,
+    height=4,
     )
     button2 = tk.Button(
     root,
     text="2",
     command=zwei_sagen,
-    width=5,
-    height=2,
+    width=10,
+    height=4,
     )
     button3 = tk.Button(
     root,
     text="3",
     command=drei_sagen,
-    width=5,
-    height=2,
+    width=10,
+    height=4,
     )
     button4 = tk.Button(
     root,
     text="4",
     command=vier_sagen,
-    width=5,
-    height=2,
+    width=10,
+    height=4,
     )
     button5 = tk.Button(
     root,
     text="5",
     command=fuenf_sagen,
-    width=5,
-    height=2,
+    width=10,
+    height=4,
     )
     button6 = tk.Button(
     root,
     text="6",
     command=sechs_sagen,
-    width=5,
-    height=2,
+    width=10,
+    height=4,
     )
     button7 = tk.Button(
     root,
     text="7",
     command=sieben_sagen,
-    width=5,
-    height=2,
+    width=10,
+    height=4,
     )
     button8 = tk.Button(
     root,
     text="8",
     command=acht_sagen,
-    width=5,
-    height=2,
+    width=10,
+    height=4,
     )
     button9 = tk.Button(
     root,
     text="9",
     command=neun_sagen,
-    width=5,
-    height=2,
+    width=10,
+    height=4,
     )
     button0 = tk.Button(
     root,
     text="0",
     command=null_sagen,
-    width=5,
-    height=2,
+    width=10,
+    height=4,
     )
     button11 = tk.Button(
     root,
     text="=",
     command=ist_gleich,
-    width=5,
-    height=2,
+    width=10,
+    height=4,
     )
     button12 = tk.Button(
     root,
     text="+",
     command=plus,
-    width=5,
-    height=2,
+    width=10,
+    height=4,
     )
     button13 = tk.Button(
     root,
     text="-",
     command=minus,
-    width=5,
-    height=2,
+    width=10,
+    height=4,
     )
     button14 = tk.Button(
     root,
     text="/",
     command=teilen,
-    width=5,
-    height=2,
+    width=10,
+    height=4,
     )
     button15 = tk.Button(
     root,
     text="*",
     command=mal,
-    width=5,
-    height=2,
+    width=10,
+    height=4,
     )
     button16 = tk.Button(
     root,
     text="**",
     command=quadrat,
-    width=5,
-    height=2,
+    width=10,
+    height=4,
     )
 
     button1.pack()
