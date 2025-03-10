@@ -33,6 +33,14 @@ def minus():
     Eingabe_liste.append("-")
 def quadrat():
     Eingabe_liste.append("**")
+def clear():
+    Eingabe_liste.clear()
+def auf():
+    Eingabe_liste.append("(")
+def zu():
+    Eingabe_liste.append(")")
+def komma():
+    Eingabe_liste.append(",")
 
 ### Die Idee ist das die Liste alle Elemente in ein print Befehl überführen für die ausgabe
 ### Die Herausforderung besteht unter ander m da rin das der pop befehl null immer überschriben wird.
@@ -162,6 +170,34 @@ if __name__ == "__main__":
     width=10,
     height=4,
     )
+    button17 = tk.Button(
+    root,
+    text="clear",
+    command=clear,
+    width=10,
+    height=4,
+    )
+    button18 = tk.Button(
+    root,
+    text="(",
+    command=auf,
+    width=10,
+    height=4,
+    )
+    button19 = tk.Button(
+    root,
+    text=")",
+    command=zu,
+    width=10,
+    height=4,
+    )
+    button20 = tk.Button(
+    root,
+    text=",",
+    command=komma,
+    width=10,
+    height=4,
+    )
 
     button1.pack()
     button1.place(x=100,y=0)
@@ -195,7 +231,14 @@ if __name__ == "__main__":
     button15.place(x=300,y=400)
     button16.pack()
     button16.place(x=100,y=500)
-
+    button17.pack()
+    button17.place(x=200,y=500)
+    button18.pack()
+    button18.place(x=300,y=500)
+    button19.pack()
+    button19.place(x=100,y=600)
+    button20.pack()
+    button20.place(x=200,y=600)
 
     label = tk.Label(root, text="", font=("Arial", 14))         #Leeres Label
     label.pack(pady=20)
