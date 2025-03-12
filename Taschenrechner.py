@@ -40,7 +40,9 @@ def auf():
 def zu():
     Eingabe_liste.append(")")
 def komma():
-    Eingabe_liste.append(",")
+    Eingabe_liste.append(".")
+def wurzel():
+    Eingabe_liste.append("** 0.5")
 
 ### Die Idee ist das die Liste alle Elemente in ein print Befehl überführen für die ausgabe
 ### Die Herausforderung besteht unter ander m da rin das der pop befehl null immer überschriben wird.
@@ -48,14 +50,17 @@ def komma():
 
 
 def ist_gleich():
-    rechnung= " ".join(map(str, Eingabe_liste))
+    rechnung= "".join(map(str, Eingabe_liste))
     ergebnis = eval(rechnung)
+    ergebnis = round(float(ergebnis), 2)
     messagebox.showinfo("Dein Ergebnis ist",f"{ergebnis}")
 
 if __name__ == "__main__":
     root = tk.Tk()
     root.title("Hallo Tkinter!")
-    root.geometry("400x600")
+    root.geometry("450x700")
+    root.configure(bg="lightblue", highlightbackground="black", highlightthickness=5)
+
 
     button1 = tk.Button(
 
@@ -198,6 +203,13 @@ if __name__ == "__main__":
     width=10,
     height=4,
     )
+    button21 = tk.Button(
+    root,
+    text="√",
+    command=wurzel,
+    width=10,
+    height=4,
+    )
 
     button1.pack()
     button1.place(x=100,y=0)
@@ -239,6 +251,8 @@ if __name__ == "__main__":
     button19.place(x=100,y=600)
     button20.pack()
     button20.place(x=200,y=600)
+    button21.pack()
+    button21.place(x=300,y=600)
 
     label = tk.Label(root, text="", font=("Arial", 14))         #Leeres Label
     label.pack(pady=20)
